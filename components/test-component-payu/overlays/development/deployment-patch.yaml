@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-payu
+  namespace: build-e2e-dxct-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:3d222a2da4f8eeea0bcc64a60f1873d7d1cb9b8da5e45d7d65008d331a43911e
+        name: my-python
+        resources: {}
+status: {}
